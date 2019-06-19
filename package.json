@@ -14,8 +14,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prettier":"prettier --white '*.js'",
-    "format-code":"npm run prettier && npm run lint:fix"
+    "prettier": "prettier --white '*.js'",
+    "format-code": "npm run prettier && npm run lint:fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,5 +40,10 @@
     "eslint-plugin-react": "^7.13.0",
     "husky": "^2.4.1",
     "prettier": "^1.18.2"
+  },
+  "husky": {
+    "hook": {
+      "pre-commit": "npm run format-code"
+    }
   }
 }
